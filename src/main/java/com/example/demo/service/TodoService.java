@@ -12,7 +12,7 @@ public class TodoService {
 	private TodoRepository repository;
 	
 	public String testService(){
-		TodoEntity entity = TodoEntity.builder().userId("user01").title("My first todo item").build();
+		TodoEntity entity = TodoEntity.builder().userId("Yeo se young").title("My first todo item").build();
 		repository.save(entity);
 		TodoEntity savedEntity = repository.searchByUserId(entity.getUserId()).get(0);
 		return savedEntity.getUserId();
